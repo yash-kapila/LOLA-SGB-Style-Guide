@@ -2,8 +2,6 @@
 Style Guide for LOLA SGB
 
 
-# WIB FM Dashboard#
-
 ## Installation ##
 
 #### Install project dependencies ####
