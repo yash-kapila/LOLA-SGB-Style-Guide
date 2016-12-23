@@ -1,0 +1,640 @@
+<div class="row-fluid" id="top">
+    <div class="navbar-inverse">
+        <div class="navbar-inner">			
+            <div class='container'>
+                <div class="col-sm-4">
+                    <h4 class="logo"><span id="wp">LOLA Style Guide - Westpac</span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row-fluid">
+            <div id="intro">
+                <h2 class='mac_heading'>Introduction</h2>
+                <p>Welcome to LOLA Style Guide.</p> <p><b>Contributors</b> : Sriram</p>
+            </div>
+            <br>			
+            <div id="boot">
+                <h2 class='mac_heading'>Bootstrap</h2>
+                    <p>LOLA is built on the Twitter Bootstrap framework v3.0</p>
+                    <p>Default Bootstrap theme is used as much as possible, with some custom css classes contained within a 'macStyles.css' file.</p>
+                    <p>For icons, "Font Awesome Icons" were used.</p>
+                    <p>The custom CSS file should be included below the default Bootstrap CSS files. Normalize.css is used to reset all css rules before loading the Bootstrap CSS files</p>
+                    <p>Bootstrap.min.js is the supporing file for the bootstrap.css for all toggle and script related actions.</p>
+                    <p>Google's JS API is used to draw charts.</p>
+                    <p>mac.js is used for custom, LOLA-specific java script code</p>
+                    <p>tableSorter.js is used to sort tables, etc.</p>
+                    <div class="panel panel-default cl">
+                        <div class="panel-heading">HTML</div>
+                        <div class="panel-body"> 
+                        <pre><code>&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/tableSorter.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/mac.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.google.com/jsapi"&gt;&lt;/script&gt;
+&lt;link href="css/normalize.css" rel="stylesheet" /&gt;
+&lt;link href="css/bootstrap.min.css" rel="stylesheet" /&gt;
+&lt;link href='css/font-awesome.css' rel='stylesheet' /&gt;
+&lt;link href="css/macStyles.css" rel="stylesheet" /&gt;
+                        </code></pre>
+                        </div>
+                    </div>
+            </div>
+            <br>
+            <div id="typography">
+                <h2 class='mac_heading'>Typography</h2>
+                <p>
+                    LOLA would follow a standard type pattern for headings and text thus providing a 
+                    uniform look and feel across the entire application. <b>@mixin</b> feature of SaSS is used
+                    to create a type for similar elements which can be <b>included</b> in the CSS classes thus
+                    avoiding repetition of CSS code.
+                </p>
+                <div class="typography">
+                    <h3>Examples</h3>
+                    <div class='div_border'>
+                        <table class="table" style="table-layout: fixed">
+                            <thead>
+                                <tr>
+                                    <th> Browser View </th>
+                                    <th> HTML Code </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h1 class="pb-medium"> McGrath Real Estate Agency Group </h1>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h1 class="pb-medium"&gt; McGrath Real Estate Agency Group &lt;/h1&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2 class="pb-bold">Extend a Facility</h2>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h2 class="pb-bold"&gt; Extend a Facility &lt;/h2&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2 class="pb-light">What's new in LOLA Version 8?</h2>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h2 class="pb-light"&gt; What's new in LOLA Version 8? &lt;/h2&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3 class="pc-bold">Search new connection limits</h3>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h3 class="pc-bold"&gt; Search new connection limits &lt;/h3&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3 class="pb-bold">Anupam Mishra <i class="fa fa-chevron-down" aria-hidden="true"></i></h3>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h3 class="pb-bold"&gt; Anupam Mishra &lt;i class="fa fa-chevron-down" aria-hidden="true"&gt; &lt;/i&gt;&lt;/h3&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="pa-bold"> apple banana cherry berry constructions </h4>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;h4 class="pa-bold"&gt; apple banana cherry berry constructions &lt;/h4&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" value="Johny Boo" style="width: 50%">
+                                        <p class="rf-regular">This entry is not valid</p>
+                                    </td>
+                                    <td>
+                                        <pre><code><b>&lt;p class="rf-regular"&gt; This entry is not valid &lt;/p&gt;</b></code></pre>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div id="colours">
+                <div id="coloursWpc">
+                    <h2 class='mac_heading'>Colors</h2>
+                    <p>Colors are taken from the GEL palette, with some customisation.</p>
+
+                    <ul class="nav nav-tabs">
+                        <li id="primary-colors" ng-class="{'active': home.selectedColor === 'primary'}">
+                            <a href="" ng-click="home.colorCodeSelected($event, 'primary');">
+                                Primary Colors
+                            </a>
+                        </li>
+                        <li id="secondary-colors" ng-class="{'active': home.selectedColor === 'secondary'}">
+                            <a href="" ng-click="home.colorCodeSelected($event, 'secondary');">
+                                Secondary Colors
+                            </a>
+                        </li>
+                        <li id="reserve-colors" ng-class="{'active': home.selectedColor === 'reserve'}">
+                            <a href="" ng-click="home.colorCodeSelected($event, 'reserve');">
+                                Reserve Colors
+                            </a>
+                        </li>
+                        <li id="background-colors" ng-class="{'active': home.selectedColor === 'background'}">
+                            <a href="" ng-click="home.colorCodeSelected($event, 'background');">
+                                Background Colors
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="primary-color-table" ng-if="home.selectedColor === 'primary'">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"> Color </th>
+                                    <th class="text-center"> Type </th>
+                                    <th class="text-center"> HEX Color Code </th>
+                                    <th class="text-center"> RGB Color Code </th>
+                                    <th class="text-center"> Class Code Reference </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #6D6D6D; padding: 30px;"></td>
+                                    <td> Primary A </td>
+                                    <td> #6D6D6D </td>
+                                    <td> rgb(109,109,109) </td>
+                                    <td> PA- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #2D373E; padding: 30px;"></td>
+                                    <td> Primary B </td>
+                                    <td> #2D373E </td>
+                                    <td> rgb(45,55,62) </td>
+                                    <td> PB- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #621A4B; padding: 30px;"></td>
+                                    <td> Primary C </td>
+                                    <td> #621A4B </td>
+                                    <td> rgb(98,26,75) </td>
+                                    <td> PC- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #4E0034; padding: 30px;"></td>
+                                    <td> Primary D </td>
+                                    <td> #4E0034 </td>
+                                    <td> rgb(78,0,52) </td>
+                                    <td> PD- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #D5002B; padding: 30px;"></td>
+                                    <td> Primary E </td>
+                                    <td> #D5002B </td>
+                                    <td> rgb(213,0,43) </td>
+                                    <td> PE- </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="secondary-color-table" ng-if="home.selectedColor === 'secondary'">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"> Color </th>
+                                    <th class="text-center"> Type </th>
+                                    <th class="text-center"> HEX Color Code </th>
+                                    <th class="text-center"> RGB Color Code </th>
+                                    <th class="text-center"> Class Code Reference </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #935599; padding: 30px;"></td>
+                                    <td> Secondary A </td>
+                                    <td> #935599 </td>
+                                    <td> rgb(109,109,109) </td>
+                                    <td> SA- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #A77BA4; padding: 30px;"></td>
+                                    <td> Secondary B </td>
+                                    <td> #A77BA4 </td>
+                                    <td> rgb(45,55,62) </td>
+                                    <td> SB- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #ABB6DA; padding: 30px;"></td>
+                                    <td> Secondary C </td>
+                                    <td> #ABB6DA </td>
+                                    <td> rgb(98,26,75) </td>
+                                    <td> SC- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #60B8BF; padding: 30px;"></td>
+                                    <td> Secondary D </td>
+                                    <td> #60B8BF </td>
+                                    <td> rgb(78,0,52) </td>
+                                    <td> SD- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #006F77; padding: 30px;"></td>
+                                    <td> Secondary E </td>
+                                    <td> #006F77 </td>
+                                    <td> rgb(213,0,43) </td>
+                                    <td> SE- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #F4A000; padding: 30px;"></td>
+                                    <td> Secondary F </td>
+                                    <td> #F4A000 </td>
+                                    <td> rgb(213,0,43) </td>
+                                    <td> SF- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #AAAAAA; padding: 30px;"></td>
+                                    <td> Secondary G </td>
+                                    <td> #AAAAAA </td>
+                                    <td> rgb(213,0,43) </td>
+                                    <td> SG- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DDDDDD; padding: 30px;"></td>
+                                    <td> Secondary H </td>
+                                    <td> #DDDDDD </td>
+                                    <td> rgb(221,221,221) </td>
+                                    <td> SH- </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="reserve-color-table" ng-if="home.selectedColor === 'reserve'">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"> Color </th>
+                                    <th class="text-center"> Type </th>
+                                    <th class="text-center"> HEX Color Code </th>
+                                    <th class="text-center"> RGB Color Code </th>
+                                    <th class="text-center"> Class Code Reference </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #61B900; padding: 30px;"></td>
+                                    <td> Success </td>
+                                    <td> #61B900 </td>
+                                    <td> rgb(97,185,0) </td>
+                                    <td> RS- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #0074C4; padding: 30px;"></td>
+                                    <td> Primary </td>
+                                    <td> #0074C4 </td>
+                                    <td> rgb(0,116,196) </td>
+                                    <td> RP- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #5BC0DE; padding: 30px;"></td>
+                                    <td> Information </td>
+                                    <td> #5BC0DE </td>
+                                    <td> rgb(91,192,222) </td>
+                                    <td> RI- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C53B00; padding: 30px;"></td>
+                                    <td> Warning </td>
+                                    <td> #C53B00 </td>
+                                    <td> rgb(197,59,0) </td>
+                                    <td> RW- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C40000; padding: 30px;"></td>
+                                    <td> Fail </td>
+                                    <td> #C40000 </td>
+                                    <td> rgb(196,0,0) </td>
+                                    <td> RF- </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="background-color-table" ng-if="home.selectedColor === 'background'">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"> Color </th>
+                                    <th class="text-center"> Type </th>
+                                    <th class="text-center"> HEX Color Code </th>
+                                    <th class="text-center"> RGB Color Code </th>
+                                    <th class="text-center"> Class Code Reference </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #FFF; padding: 30px;"></td>
+                                    <td> White </td>
+                                    <td> #FFFFFF </td>
+                                    <td> rgb(255,255,255) </td>
+                                    <td> BW- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #F5F5F5; padding: 30px;"></td>
+                                    <td> Grey </td>
+                                    <td> #F5F5F5 </td>
+                                    <td> rgb(245,245,245) </td>
+                                    <td> BG- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #F6F3F6; padding: 30px;"></td>
+                                    <td> Purple </td>
+                                    <td> #F6F3F6 </td>
+                                    <td> rgb(246,243,246) </td>
+                                    <td> BP- </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #EDF1FF; padding: 30px;"></td>
+                                    <td> Blue </td>
+                                    <td> #EDF1FF </td>
+                                    <td> rgb(237,241,255) </td>
+                                    <td> BB- </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="buttons">
+                <h2 class='mac_heading'>Buttons</h2>
+                <p>
+                    Buttons are styled using the Gel Framework as guide 
+                    with little tweaks specific to LOLA.
+                </p>
+                <div class="container">
+                    <table class="table table-bordered text-center" style="table-layout: fixed">
+                        <thead>
+                            <tr>
+                                <th class="text-center"> Browser View </th>
+                                <th class="text-center"> HTML Code </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-link"> Cancel </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-link"&gt; Cancel &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-hero"> Decision </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-hero"&gt; Decision &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-primary"> Add Facility </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-primary"&gt; Add Facility &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-secondary"> Expand All </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-secondary"&gt; Expand All &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-inline-secondary"> Review Details </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-inline-secondary"&gt; Review Details &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn lola-btn-accordion-square">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </button>
+                                    <button class="btn lola-btn-accordion-square">
+                                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <pre><code><b>&lt;button class="btn lola-btn-accordion-square"&gt; &lt;i class="fa fa-pencil" aria-hidden="true"&gt;&lt;/i&gt; &lt;/button&gt;</b></code></pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="dropdown">
+                <h2 class='mac_heading'> Dropdowns </h2>
+                <p>
+                    Dropdowns are styled using the Gel Framework as guide 
+                    with little tweaks specific to LOLA.
+                </p>
+                <p>
+                    Provide <b>default</b> only in case an option needs to be pre-selected in the dropdown.
+                    Otherwise, provide <b>title</b>.
+                </p>
+                <div class="container">
+                    <table class="table table-bordered" style="table-layout: fixed">
+                        <thead>
+                            <tr>
+                                <th> Browser View </th>
+                                <th> HTML </th>
+                                <th> Javascript </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <lola-dropdown 
+                                        title="Select & Add New"
+                                        default="home.dropdown[0]"
+                                        menu-items="home.dropdown"
+                                        on-select="home.dropdownOptionSelected(id)">
+                                    </lola-dropdown>
+                                    <br>
+                                </td>
+                                <td>
+<pre><code>&lt;lola-dropdown 
+    title="Select & Add New"
+    default="dropdown[0]"
+    menu-items="dropdown"
+    on-select="dropdownOptionSelected(id)"&gt;
+&lt;/lola-dropdown&gt;</code></pre>
+                                </td>
+                                <td>
+<pre><code>vm.dropdown = [
+    { id: 1, name: "Add Borrowing Entity" },
+    { id: 2, name: "Add Facility" },
+    { id: 3, name: "Add Security" },
+    { id: 4, name: "Add Guarantee" }
+]
+
+vm.dropdownOptionSelected = function(id) {
+    console.log(id);
+}
+</code></pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="toggle-radio-buttons">
+                <h2 class='mac_heading'>Toggle/Radio</h2>
+                <p> Toggle/Radio buttons are styled using the GEL
+                    Framework as guide with little tweaks specific to LOLA.
+                </p>
+                <p>
+                    Provide <b>default</b> only in case a button needs to be pre-selected in the toggle list.
+                </p>
+                <p>
+                    Provide a <b>unique name</b> for each radio buttons group. 
+                </p>
+                <div class="toggle-radio-buttons">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Browser View</th>
+                                <th>HTML</th>
+                                <th>Javascript</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <lola-toggle-buttons
+                                        name="conditional-limits"
+                                        options="home.toggleOptions"
+                                        default="home.toggleOptions[0]"
+                                        on-select="home.toggleOptionsCallback(id)">
+                                    </lola-toggle-buttons>
+                                </td>
+                                <td>
+<pre><code>&lt;lola-toggle-buttons
+    name="conditional-limits"    
+    options="toggleOptions"
+    default="toggleOptions[0]"
+    on-select="toggleOptionsCallback(id)"&gt;
+&lt;/lola-toggle-buttons&gt;</code></pre>
+                                </td>
+                                <td>
+<pre><code>vm.toggleOptions = [
+    { id: 'ALL', name: 'All' },
+    { id: 'YES', name: 'Yes' },
+    { id: 'NO', name: 'No' }
+];
+
+vm.toggleOptionsCallback = function(id) {
+    console.log(id);
+}</code></pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <lola-toggle-buttons
+                                        name="connection-restricted"
+                                        options="home.toggleOptions"
+                                        on-select="home.toggleOptionsCallback(id)">
+                                    </lola-toggle-buttons>
+                                </td>
+                                <td>
+<pre><code>&lt;lola-toggle-buttons
+    name="connection-restricted"
+    options="toggleOptions"
+    on-select="toggleOptionsCallback(id)"&gt;
+&lt;/lola-toggle-buttons&gt;</code></pre>
+                                </td>
+                                <td>
+<pre><code>vm.toggleOptions = [
+    { id: 'ALL', name: 'All' },
+    { id: 'YES', name: 'Yes' },
+    { id: 'NO', name: 'No' }
+];
+
+vm.toggleOptionsCallback = function(id) {
+    console.log(id);
+}</code></pre>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="form-elements">
+                <h2 class='mac_heading'>Form Elements</h2>
+                <p> Form elements are styled using the Westpac GEL Framework
+                    as guide with little tweaks specific to LOLA.
+                </p>
+                <div class="container">
+                    <form novalidate name="form">
+                        <!-- INPUT TEXT FIELD -->
+                        <div class="lola-form-group">
+                            <label class="lola-form-label"> Username </label>
+                            <input 
+                                type="text" 
+                                class="lola-form-input-text" 
+                                name="username" 
+                                ng-model="home.userForm.username"
+                                required>
+                            <p class="rf-regular lola-form-validation-error">
+                                <!-- ng-if="form.$submitted && form.username.$invalid" -->
+                                Username is required
+                            </p>
+                        </div>
+
+                        <!-- SELECT DROPDOWN LG -->
+                        <div class="lola-form-group">
+                            <label class="lola-form-label">
+                                Who is the primary borrower?
+                            </label>
+                            <lola-dropdown 
+                                title="Selection Option"
+                                menu-items="home.dropdown"
+                                on-select="home.dropdownOptionSelected(id)"
+                                size='lg'>
+                            </lola-dropdown>
+                        </div>
+
+                        <!-- INPUT TEXT AREA -->
+                        <div class="lola-form-group">
+                            <label class="lola-form-label">
+                                Description
+                            </label>
+                            <textarea 
+                                class="lola-form-text-area"
+                                ng-model="home.userForm.textArea"
+                                maxlength="250"
+                                rows="5"
+                                cols="70">
+                            </textarea>
+                            <p class="lola-form-text-area-message">
+                                {{ 250 - home.userForm.textArea.length }} characters remaining
+                            </p>
+                        </div>
+
+                        <!-- FORM INPUT NUMBER -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

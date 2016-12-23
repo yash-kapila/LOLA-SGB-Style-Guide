@@ -1,0 +1,18 @@
+@mixin lola-typography($size: inherit, $family: inherit, $color: inherit, $transform: inherit){
+	font-size: $size;
+	font-family: $family;
+	color: $color;
+	text-transform: $transform;
+	@content;
+}
+
+@mixin lola-buttons($radius: inherit, $background_color: inherit){
+	border-radius: $radius;
+	background-color: $background_color;
+	outline: none !important;
+}
+
+@mixin lola-buttons-dimensions($height, $width) {
+	min-height: $height;
+	min-width: $width;	
+}

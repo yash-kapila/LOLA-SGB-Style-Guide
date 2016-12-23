@@ -1,0 +1,69 @@
+@import '../sass-mixins/main.scss';
+
+/* --- DROPDOWNS --- */
+div {
+	&.lola-dropdown {
+		button {
+			&.lola-dropdown-btn, &.lola-dropdown-btn:hover, &.lola-dropdown-btn:focus {
+				@include lola-typography(14px, Roboto-Bold, #621A4B, capitalize);
+				@include lola-buttons(3px, #FFFFFF);
+				@include lola-buttons-dimensions(36px, 15.36em);
+				border: 1px solid #621A4B;
+				padding: 10px 16px;
+			}
+
+			&.lola-dropdown-btn-lg, &.lola-dropdown-btn-lg:hover, &.lola-dropdown-btn-lg:focus {
+				@include lola-typography(14px, Roboto, #6D6D6D, capitalize);
+				@include lola-buttons(3px, #FFFFFF);
+				@include lola-buttons-dimensions(36px, 25.45em);
+				border: 1px solid #DDDDDD;
+				padding: 10px 16px;
+			}
+
+			&.lola-dropdown-btn, &.lola-dropdown-btn-lg {
+				.caret {
+					float: right;
+					border-top: 6px solid #621A4B;
+					border-right: 6px solid transparent;
+					border-left: 6px solid transparent;
+					margin-top: 6px;
+				}
+
+				.lola-dropdown-text{
+					float: left;
+				}		
+			}
+		}
+
+		ul {
+			&.lola-dropdown-menu {
+				@include lola-buttons-dimensions(initial, 15.36em);
+
+				li {
+					a {
+						@include lola-typography(14px, Roboto-Bold, #2D373E, capitalize);
+						padding: 3px 16px;
+					}
+
+					a:hover {
+						@include lola-typography(13px, Roboto, #FFFFFF, capitalize);
+						background-color: #621A4B;
+						padding: 3px 16px;
+
+					}
+				}
+			}
+
+			&.lola-dropdown-menu-lg {
+				@include lola-buttons-dimensions(initial, 25.45em);
+
+				li {
+					a {
+						@include lola-typography(14px, Roboto, #6D6D6D, capitalize);
+						padding: 3px 16px;
+					}
+				}
+			}			
+		}
+	}
+}

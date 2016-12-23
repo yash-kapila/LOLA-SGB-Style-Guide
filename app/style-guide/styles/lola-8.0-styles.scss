@@ -1,0 +1,44 @@
+
+
+// /* --- PAGINATION --- */
+// div {
+// 	&.lola-pagination {
+// 		text-align: center;
+// 	}
+
+// 	>.lola-pagination-list{
+// 		margin: 0px;
+
+// 		>li {
+// 			>a, >a:hover, >a:active, >a:focus {
+// 				@include lola-typography(14px, Roboto, #621A4B);
+// 			}
+// 		}
+
+// 		>li:first-child {
+// 			>a {
+// 				margin-left: 0;
+// 				border-top-left-radius: 3px;
+// 				border-bottom-left-radius: 3px;
+// 			}
+// 		}
+
+// 		>li:last-child {
+// 			>a {
+// 				margin-left: 0;
+// 				border-top-right-radius: 3px;
+// 				border-bottom-right-radius: 3px;
+// 			}
+// 		}
+
+// 		>li {
+// 			&.active{
+// 				>a, >a:hover, >a:active, >a:focus {
+// 					@include lola-typography(14px, Roboto, #FFFFFF);
+// 					background-color: #621A4B;
+// 					border-color: #621A4B;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

@@ -1,0 +1,45 @@
+@import '../sass-mixins/main.scss';
+
+/* - LOLA BUTTONS - */
+button, input[type=button] {
+	&.lola-btn-link, &.lola-btn-link:hover, &.lola-btn-link:focus {
+		@include lola-typography(14px, Roboto, #621A4B);
+		@include lola-buttons(0, transparent);
+		text-decoration: underline;
+		box-shadow: none;
+	}
+
+	&.lola-btn-hero, &.lola-btn-hero:hover, &.lola-btn-hero:focus {
+		@include lola-typography(14px, Roboto-Bold, #FFFFFF);
+		@include lola-buttons(3px, #D5002B);
+		@include lola-buttons-dimensions(36px, 10em);
+	}
+
+	&.lola-btn-primary, &.lola-btn-primary:hover, &.lola-btn-primary:focus {
+		@include lola-typography(14px, Roboto-Bold, #FFFFFF);
+		@include lola-buttons(3px, #621A4B);
+		@include lola-buttons-dimensions(36px, 10em);
+	}
+	
+	&.lola-btn-secondary, &.lola-btn-secondary:hover, &.lola-btn-secondary:focus {
+		@include lola-typography(14px, Roboto-Bold, #621A4B);
+		@include lola-buttons(3px, #FFFFFF);
+		@include lola-buttons-dimensions(36px, 10em);
+		border: 1px solid #621A4B;
+	}
+
+	&.lola-btn-inline-secondary, &.lola-btn-inline-secondary:hover, &.lola-btn-inline-secondary:focus {
+		@include lola-typography(13px, Roboto-Bold, #621A4B);
+		@include lola-buttons(3px, #FFFFFF);
+		@include lola-buttons-dimensions(30px, 10em);
+		border: 1px solid #621A4B;
+	}
+
+	&.lola-btn-accordion-square, &.lola-btn-accordion-square:hover, &.lola-btn-accordion-square:focus {
+		@include lola-typography(inherit, inherit, #621A4B);
+		@include lola-buttons(3px, #FFFFFF);
+		@include lola-buttons-dimensions(36px, 2.57em);
+		border: 1px solid #621A4B;
+		padding: 6px 10px;
+	}
+}

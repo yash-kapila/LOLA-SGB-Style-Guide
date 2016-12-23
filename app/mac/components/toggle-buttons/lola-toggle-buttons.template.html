@@ -1,0 +1,13 @@
+<div class="lola-btn-toggle-group">
+    <label class="lola-btn-toggle-group-item" ng-repeat="item in $ctrl.options">
+        <input class="lola-btn-toggle-group-input" 
+            type="radio"
+            name="{{$ctrl.name}}"
+            ng-value="item"
+            ng-model="$ctrl.selectedButton"
+            ng-change="$ctrl.optionSelected($ctrl.selectedButton)">
+        <span class="btn lola-btn-toggle-group-text"> 
+            {{ item.name }} 
+        </span>
+    </label>
+</div>

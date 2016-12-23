@@ -1,0 +1,139 @@
+@import '../sass-mixins/main.scss';
+
+/* - Fonts - */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(../../fonts/google.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(../../fonts/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(../../fonts/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Light'), local('Roboto-Light'), url(../../fonts/Roboto-Light.ttf) format('truetype');
+}
+
+body {
+	font-family:"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+/* --- TYPOGRAPHY --- */
+h1 {
+	&.pb-medium {
+		@include lola-typography(26px, Roboto-Medium, #2D373E);	
+	}
+}
+
+h2 {
+	&.pb-bold {
+		@include lola-typography(18px, Roboto-Bold, #2D373E);
+	}
+
+	&.pb-light {
+		@include lola-typography(18px, Roboto-Light, #2D373E);
+	}
+}
+
+h3 {
+	&.pb-bold {
+		@include lola-typography(15px, Roboto-Bold, #2D373E);
+	}
+
+	&.pc-bold {
+		@include lola-typography(15px, Roboto-Bold, #621A4B);
+	}
+
+	&.pb-bold-small {
+		@include lola-typography(14px, Roboto-Bold, #2D373E);
+	}
+
+	&.pc-bold-small {
+		@include lola-typography(14px, Roboto-Bold, #621A4B);
+	}
+
+	&.bw-bold {
+		@include lola-typography(14px, Roboto-Bold, #fff);
+	}
+}
+
+h4 {
+	&.bw-bold-uppercase {
+		@include lola-typography(13px, Roboto-Bold, #FFF, uppercase);
+	}
+
+	&.pa-bold {
+		@include lola-typography(13px, Roboto-Bold, #6D6D6D);
+	}
+
+	&.pb-bold-uppercase {
+		@include lola-typography(13px, Roboto-Bold, #2D373E, uppercase);
+	}
+}
+
+span, p {
+	&.pc-regular {
+		@include lola-typography(14px, Roboto, #621A4B);
+	}
+
+	&.pa-regular {
+		@include lola-typography(14px, Roboto, #6D6D6D);
+	}
+
+	&.bw-regular {
+		@include lola-typography(14px, Roboto, #FFFFFF);
+	}
+
+	&.rs-regular {
+		@include lola-typography(14px, Roboto, #008000);
+	}
+
+	&.pa-regular-small {
+		@include lola-typography(13px, Roboto, #6D6D6D);
+	}
+
+	&.pc-regular-small {
+		@include lola-typography(13px, Roboto, #621A4B);
+	}
+
+	&.bw-regular-small {
+		@include lola-typography(13px, Roboto, #FFFFFF);
+	}
+
+	&.rf-regular {
+		@include lola-typography(13px, Roboto, #C40000);
+	}
+
+	&.sg-regular {
+		@include lola-typography(12px, Roboto, #AAA);
+	}
+
+	&.pb-regular {
+		@include lola-typography(12px, Roboto, #2D373E);
+	}
+
+	&.pb-regular {
+		@include lola-typography(12px, Roboto, #2D373E);
+	}
+
+	&.bw-block-small {
+		@include lola-typography(11px, Roboto-Bold, #FFFFFF);
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"prod": {
+		"env": "prod",
+		"logLevel": "LOG",
+		"hashAssets": true
+	},
+	"local": {
+		"env": "local",
+		"debug": true,
+		"logLevel": "ALL"
+	},
+	"test": {
+		"env": "test"
+	}
+}

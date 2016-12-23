@@ -1,0 +1,43 @@
+@import '../sass-mixins/main.scss';
+
+/* - LOLA FORM ELEMENTS - */
+form {
+    .lola-form-group {
+        margin-bottom: 20px;
+
+        /* - LABEL - */
+        .lola-form-label {
+            @include lola-typography(13px, Roboto-Bold, #2D373E);
+            margin-bottom: 10px;
+        }
+
+        /* - INPUT TYPE = TEXT - */
+        .lola-form-input-text {
+            @include lola-typography(13px, Roboto, #6D6D6D);
+            @include lola-buttons(3px, #FFFFFF);
+            @include lola-buttons-dimensions(36px, 250px);
+            border: 1px solid #DDDDDD;
+            display: block;
+            outline: none;
+        }
+
+        .lola-form-validation-error {
+            margin: 5px 0 0 0 ;
+        }
+
+        /* - INPUT TYPE = TEXT AREA - */
+        .lola-form-text-area {
+            @include lola-typography(13px, Roboto, #6D6D6D);
+            @include lola-buttons(3px, #FFFFFF);
+            border: 1px solid #DDDDDD;
+            display: block;
+            resize: none;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        .lola-form-text-area-message {
+            @include lola-typography(13px, Roboto, #6D6D6D);
+        }
+    }
+}

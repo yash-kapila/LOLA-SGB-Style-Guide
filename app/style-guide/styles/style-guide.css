@@ -1,0 +1,252 @@
+/* --- STYLE GUIDE ONLY STYLES --- */
+/* 	The following styles only have relevance in the style guide.
+Please keep these styles contained within this style guide,
+and do not move into the main lola app css file. */
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0.625em 0;
+	color:#621A4B;
+}
+
+.div_border{
+	border:solid 1px #ddd;
+}
+
+/* - Page containers - */
+.container {
+	width:970px;
+	margin:0 auto;
+	padding:0;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	padding:2px;
+}
+
+.container .row-fluid {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.row-fluid {
+    width: 100%;
+}
+.row-fluid:before, .row-fluid:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.row-fluid:after {
+    clear: both;
+}
+
+.row-fluid-lr {
+	margin:1em;
+}
+
+/* Nav buttons */
+.btn-link.active, .btn-link.active:hover {
+	background-color:#621A4B;
+	border-radius:20px;
+	color:#fff;
+	text-decoration: none;
+	border:0;
+}
+
+.btn-link {
+	color: #666;
+}
+
+.btn-link:hover {
+	color:#DC241F;
+	text-decoration: none;
+}
+
+/* ---NAVBAR --- */
+.navbar-inverse{
+	border-top:solid 10px #DC241F;
+}
+
+.navbar-inner{
+	padding-bottom:5px;
+}
+
+.navbar-inner i {
+	color:#fff;
+	font-size:150%;
+	margin:3px 7px 0;
+}
+
+.navbar-inner .col-sm-3 {
+	margin-top: 5px;
+	text-align:right;
+	padding-right:5px;
+}
+
+button.navbar, button.navbar:hover, button.navbar:active {
+	padding-top:3px;
+	height:1em;
+	border:0;
+	background-color: transparent;
+	color:#fff;
+	padding:0;
+	min-height: 2em;
+	margin:0;
+	right:0;
+}
+
+.open>.dropdown-toggle.btn-default.navbar {
+ 	border:0;
+	background-color: transparent;
+	color:#fff;
+}
+
+ a.btn.btn-link:active {
+	background-color: #621A4B;
+	border-radius: 20px;
+	color:#fff;
+}
+
+/* --- LOGO --- */
+.logo{
+	background-image:url(../images/logo.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	padding-left:60px;
+	color:#fff;
+	font-weight: normal;
+}
+
+.fontawesome-icon-list .col-sm-4 {
+    padding-top:1em;
+}
+
+.container .col-sm-8 {
+    width:970px;
+    margin:0 auto;
+}
+
+.panel-secondary .col-sm-8 {
+    width:66.66666667%;
+}
+
+.mac_heading {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    border-bottom:2px solid #ccc;
+    margin-top:0;
+    color:#621A4B;
+}
+
+#panels .cl .panel-heading, .cl .panel-heading, .navbar-header {
+    background-color:#f5f5f5;
+    color:#621A4B;
+    font-weight: inherit;
+    font-size: 24px;
+}
+
+#panels .panel-light>.panel-heading {
+    background-color: rgba(98,26,75,0.3);
+    color:#000;
+}
+
+.wrap {
+    width:100%;
+    margin:1em auto;
+}
+
+li:hover {
+    background-color: rgba(98,26,75, 0.2);
+    transition: background-color 0.25s ease-out;
+}
+
+li {
+    transition: background-color 0.25s ease-out;
+}
+
+ul a {
+    color: #621A4B;
+}
+
+ul a:hover {
+    color: #621A4B;
+    text-decoration:underline;
+}
+
+.dropdown ul li, .dropdown ul li:hover {
+    background-color: #fff;
+    transition:none;
+}
+
+
+.list-group .glyphicon{
+    float:right;
+    color:#621A4B;	
+}
+
+.palette {
+    height:4.2em;
+    width:6.5em;
+    display:block;
+}
+
+.palette-box {
+    border: 1px solid #ccc;
+    padding:1em;
+    height:9em;
+    width:9em;
+    float:left;
+    margin: 1em;
+}
+
+.h h2, h3 {
+    border:0;
+}
+
+#panels .panel-heading {
+    background-color: #621A4B;
+    color:#fff;
+    font-size:140%;
+}
+
+#header .pageHeader {
+    padding-left:0;
+}
+
+#header .pageHeader h2 {
+    margin-left:-17px;
+}
+.navbar-inner {
+    height:5.1em;
+}
+
+.navbar-inner .col-sm-4 {
+    margin-top:1em;
+}
+
+
+.navbar-header h4 {
+    margin-top:0.1em;
+}
+
+.navbar-header h4 {
+    color:#621A4B;
+}
+
+.navbar-toggle {
+    background-color:#fff;
+}
+
+ul>div>a>li {
+    padding-left:4em!important;
+    text-indent: 0!important;
+}
+
+code {
+    tab-size:4;
+    white-space: pre-wrap;
+}
+
+.text-center{
+    text-align: center;
+}

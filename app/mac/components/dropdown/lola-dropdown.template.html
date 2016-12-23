@@ -1,0 +1,17 @@
+<div class="dropdown lola-dropdown">
+    <button 
+        class="btn"
+        ng-class="{ 'lola-dropdown-btn': $ctrl.size !== 'lg', 'lola-dropdown-btn-lg': $ctrl.size === 'lg' }" 
+        data-toggle="dropdown">
+        <span class="lola-dropdown-text"> {{ $ctrl.heading }} </span>
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu"
+        ng-class="{ 'lola-dropdown-menu': $ctrl.size !== 'lg', 'lola-dropdown-menu-lg': $ctrl.size === 'lg' }">
+        <li ng-repeat="option in $ctrl.menuItems">
+            <a href="" ng-click="$ctrl.itemSelected(option)"> 
+                {{ option.name }} 
+            </a>
+        </li>
+    </ul>
+</div>
