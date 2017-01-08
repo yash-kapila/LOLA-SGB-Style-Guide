@@ -7,7 +7,7 @@ form {
 
         /* - LABEL - */
         .lola-form-label {
-            @include lola-typography(13px, Roboto-Bold, #2D373E);
+            @include lola-typography(13px, Roboto-Bold, #6D6D6D);
             margin-bottom: 10px;
         }
 
@@ -17,6 +17,7 @@ form {
             @include lola-buttons(3px, #FFFFFF);
             @include lola-buttons-dimensions(36px, 250px);
             border: 1px solid #DDDDDD;
+            padding: 0 0 0 10px;
             display: block;
             outline: none;
         }
@@ -38,6 +39,39 @@ form {
 
         .lola-form-text-area-message {
             @include lola-typography(13px, Roboto, #6D6D6D);
+        }
+
+        /* - INPUT TYPE = NUMBER - */
+        .lola-form-input-number {
+            @include lola-typography(13px, Roboto, #6D6D6D);
+            @include lola-buttons-dimensions(36px, 220px);
+            border: 1px solid #DDDDDD;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            padding: 0 0 0 10px;
+            display: block;
+            outline: none;
+        }
+
+        .lola-input-group-addon {
+            @include lola-typography(13px, Roboto, #6D6D6D);
+            padding: 6px 10px;
+            background-color: #DDDDDD;
+            border: 1px solid #DDDDDD;
+            border-right: 0;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            display: table-cell;
+            vertical-align: middle;
+            width: 1%;
+        }
+
+        .lola-form-input-search-icon {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            color: #621A4B;
+            cursor: pointer;
         }
     }
 }
