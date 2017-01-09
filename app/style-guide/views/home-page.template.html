@@ -586,6 +586,7 @@ vm.toggleOptionsCallback = function(id) {
                 </p>
                 <div class="container">
                     <form novalidate name="form">
+
                         <!-- INPUT TEXT FIELD -->
                         <div class="lola-form-group">
                             <label class="lola-form-label"> Username </label>
@@ -637,13 +638,29 @@ vm.toggleOptionsCallback = function(id) {
                                 Latest Market Value
                             </label>
                             <div class="input-group">
-                                <div class="lola-input-group-addon">
+                                <span class="lola-input-group-addon">
                                     $
-                                </div>
+                                </span>
                                 <input 
                                     type="text" 
-                                    class="lola-form-input-number" 
+                                    class="lola-form-input-text" 
                                     placeholder="Amount">
+                            </div>
+                        </div>
+
+                        <!-- FORM INPUT NUMBER -->
+                        <div class="lola-form-group">
+                            <label class="lola-form-label">
+                                Latest Market Value
+                            </label>
+                            <div class="input-group">
+                                <input 
+                                    type="text" 
+                                    class="lola-form-input-text" 
+                                    placeholder="Amount">
+                                <span class="lola-input-group-addon">
+                                    $
+                                </span>
                             </div>
                         </div>
 
@@ -655,10 +672,10 @@ vm.toggleOptionsCallback = function(id) {
                             <div class="input-group">
                                 <input 
                                     type="text" 
-                                    class="lola-form-input-text" 
+                                    class="lola-form-input-text lola-input-search" 
                                     placeholder="Amount"
                                     required>
-                                <span class="lola-form-input-search-icon">
+                                <span class="lola-input-search-icon">
                                     <i class="fa fa-search"></i>
                                 </span>
                             </div>
