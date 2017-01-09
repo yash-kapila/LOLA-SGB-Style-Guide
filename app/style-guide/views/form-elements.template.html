@@ -1,0 +1,127 @@
+<div id="form-elements">
+    <h2 class='mac_heading'>Form Elements</h2>
+    <p> Form elements are styled using the Westpac GEL Framework
+        as guide with little tweaks specific to LOLA.
+    </p>
+    <div class="container">
+        <form novalidate name="form">
+
+            <!-- INPUT TEXT FIELD -->
+            <div class="lola-form-group">
+                <label class="lola-form-label"> Username </label>
+                <input 
+                    type="text" 
+                    class="lola-form-input-text" 
+                    name="username" 
+                    ng-model="home.userForm.username"
+                    required>
+                <p class="rf-regular lola-form-validation-error">
+                    <!-- ng-if="form.$submitted && form.username.$invalid" -->
+                    Username is required
+                </p>
+            </div>
+
+            <!-- SELECT DROPDOWN LG -->
+            <div class="lola-form-group">
+                <label class="lola-form-label">
+                    Who is the primary borrower?
+                </label>
+                <lola-dropdown 
+                    title="Selection Option"
+                    menu-items="home.dropdown"
+                    on-select="home.dropdownOptionSelected(id)"
+                    size='lg'>
+                </lola-dropdown>
+            </div>
+
+            <!-- INPUT TEXT AREA -->
+            <div class="lola-form-group">
+                <label class="lola-form-label">
+                    Description
+                </label>
+                <textarea 
+                    class="lola-form-text-area"
+                    ng-model="home.userForm.textArea"
+                    maxlength="250"
+                    rows="5"
+                    cols="70">
+                </textarea>
+                <p class="lola-form-text-area-message">
+                    {{ 250 - home.userForm.textArea.length }} characters remaining
+                </p>
+            </div>
+
+            <!-- FORM INPUT NUMBER -->
+            <div class="lola-form-group">
+                <label class="lola-form-label">
+                    Latest Market Value
+                </label>
+                <div class="input-group">
+                    <span class="lola-input-group-addon">
+                        $
+                    </span>
+                    <input 
+                        type="text" 
+                        class="lola-form-input-text" 
+                        placeholder="Amount">
+                </div>
+            </div>
+
+            <!-- FORM INPUT NUMBER -->
+            <div class="lola-form-group">
+                <label class="lola-form-label">
+                    Latest Market Value
+                </label>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="lola-form-input-text" 
+                        placeholder="Amount">
+                    <span class="lola-input-group-addon">
+                        $
+                    </span>
+                </div>
+            </div>
+
+            <!-- FORM INPUT SEARCH ICON -->
+            <div class="lola-form-group">
+                <label class="lola-form-label"> 
+                    Search ANZSIC 
+                </label>
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="lola-form-input-text lola-input-search" 
+                        placeholder="Amount"
+                        required>
+                    <span class="lola-input-search-icon">
+                        <i class="fa fa-search"></i>
+                    </span>
+                </div>
+            </div>
+            <br>
+            <!-- FORM INPUT RADIO BUTTONS -->
+            <div class="lola-form-group">
+                <h1 class="pb-medium">
+                    Verify the following
+                </h1>
+                <p class="pa-regular-small">
+                    Are statutory payments (ie GST, PF, ESI,<br> taxable components)
+                    up to date?
+                </p>
+                <label class="radio"> 
+                    <input type="radio" class="radio-input" name="options" checked>
+                    <span class="radio-text">
+                        YES
+                    </span>
+                </label>
+                <label class="radio"> 
+                    <input type="radio" class="radio-input" name="options">
+                    <span class="radio-text">
+                        NO
+                    </span>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
