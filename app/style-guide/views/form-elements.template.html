@@ -4,124 +4,265 @@
         as guide with little tweaks specific to LOLA.
     </p>
     <div class="container">
-        <form novalidate name="form">
+        <table class="table table-bordered" style="table-layout: fixed">
+            <thead>
+                <tr>
+                    <th style="width: 60%"> UI </th>
+                    <th> HTML </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- INPUT TEXT FIELD -->
+                            <div class="lola-form-group">
+                                <label class="lola-form-label"> Username </label>
+                                <input 
+                                    type="text" 
+                                    class="lola-form-input-text" 
+                                    name="username" 
+                                    ng-model="home.userForm.username"
+                                    required>
+                                <p class="rf-regular lola-form-validation-error">
+                                    <!-- ng-if="form.$submitted && form.username.$invalid" -->
+                                    Username is required
+                                </p>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- INPUT TEXT FIELD --&gt;</b>
 
-            <!-- INPUT TEXT FIELD -->
-            <div class="lola-form-group">
-                <label class="lola-form-label"> Username </label>
-                <input 
-                    type="text" 
-                    class="lola-form-input-text" 
-                    name="username" 
-                    ng-model="home.userForm.username"
-                    required>
-                <p class="rf-regular lola-form-validation-error">
-                    <!-- ng-if="form.$submitted && form.username.$invalid" -->
-                    Username is required
-                </p>
-            </div>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;label class="lola-form-label"&gt; Username &lt;/label&gt;
+        &lt;input 
+            type="text" 
+            class="lola-form-input-text" 
+            name="username"
+            required&gt;
+        &lt;p class="rf-regular lola-form-validation-error"&gt;
+            Username is required
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- INPUT TEXT AREA -->
+                            <div class="lola-form-group">
+                                <label class="lola-form-label">
+                                    Description
+                                </label>
+                                <textarea 
+                                    class="lola-form-text-area"
+                                    ng-model="home.userForm.textArea"
+                                    maxlength="250"
+                                    rows="5"
+                                    cols="70">
+                                </textarea>
+                                <p class="lola-form-text-area-message">
+                                    {{ 250 - home.userForm.textArea.length }} characters remaining
+                                </p>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- INPUT TEXT AREA --&gt;</b>
 
-            <!-- SELECT DROPDOWN LG -->
-            <div class="lola-form-group">
-                <label class="lola-form-label">
-                    Who is the primary borrower?
-                </label>
-                <lola-dropdown 
-                    title="Selection Option"
-                    menu-items="home.dropdown"
-                    on-select="home.dropdownOptionSelected(id)"
-                    size='lg'>
-                </lola-dropdown>
-            </div>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;label class="lola-form-label"&gt; Description &lt;/label&gt;
+        &lt;textarea 
+            class="lola-form-text-area"
+            ng-model="home.userForm.textArea"
+            maxlength="250"
+            rows="5"
+            cols="70"&gt;
+        &lt;/textarea&gt;
+        &lt;p class="rf-regular lola-form-validation-error"&gt;
+            {{ 250 - home.userForm.textArea.length }} characters remaining
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- SELECT DROPDOWN LG -->
+                            <div class="lola-form-group">
+                                <label class="lola-form-label">
+                                    Who is the primary borrower?
+                                </label>
+                                <lola-dropdown 
+                                    title="Selection Option"
+                                    menu-items="home.dropdown"
+                                    on-select="home.dropdownOptionSelected(id)"
+                                    size='lg'>
+                                </lola-dropdown>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- SELECT DROPDOWN LARGE --&gt;</b>
 
-            <!-- INPUT TEXT AREA -->
-            <div class="lola-form-group">
-                <label class="lola-form-label">
-                    Description
-                </label>
-                <textarea 
-                    class="lola-form-text-area"
-                    ng-model="home.userForm.textArea"
-                    maxlength="250"
-                    rows="5"
-                    cols="70">
-                </textarea>
-                <p class="lola-form-text-area-message">
-                    {{ 250 - home.userForm.textArea.length }} characters remaining
-                </p>
-            </div>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;label class="lola-form-label"&gt; Who is the primary borrower? &lt;/label&gt;
+        &lt;lola-dropdown 
+            title="Selection Option"
+            menu-items="home.dropdown"
+            on-select="home.dropdownOptionSelected(id)"
+            size='lg'&gt;
+        &lt;/lola-dropdown&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- FORM INPUT ADDONS -->
+                            <div class="lola-form-group">
+                                <label class="lola-form-label">
+                                    Latest Market Value
+                                </label>
+                                <div class="input-group">
+                                    <span class="lola-input-group-addon">
+                                        $
+                                    </span>
+                                    <input 
+                                        type="text" 
+                                        class="lola-form-input-text" 
+                                        placeholder="Amount">
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- FORM INPUT ADDONS --&gt;</b>
 
-            <!-- FORM INPUT NUMBER -->
-            <div class="lola-form-group">
-                <label class="lola-form-label">
-                    Latest Market Value
-                </label>
-                <div class="input-group">
-                    <span class="lola-input-group-addon">
-                        $
-                    </span>
-                    <input 
-                        type="text" 
-                        class="lola-form-input-text" 
-                        placeholder="Amount">
-                </div>
-            </div>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;label class="lola-form-label"&gt; Latest Market Value &lt;/label&gt;
+        &lt;div class="input-group"&gt;
+            &lt;span class="lola-input-group-addon"&gt; & &lt;/span&gt;
+            &lt;input 
+                type="text" 
+                class="lola-form-input-text" 
+                placeholder="Amount"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- FORM INPUT SEARCH ICON -->
+                            <div class="lola-form-group">
+                                <label class="lola-form-label"> 
+                                    Search ANZSIC 
+                                </label>
+                                <div class="input-group">
+                                    <input 
+                                        type="text" 
+                                        class="lola-form-input-text lola-input-search" 
+                                        placeholder="Amount"
+                                        required>
+                                    <span class="lola-input-search-icon">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- FORM INPUT SEARCH ICON --&gt;</b>
 
-            <!-- FORM INPUT NUMBER -->
-            <div class="lola-form-group">
-                <label class="lola-form-label">
-                    Latest Market Value
-                </label>
-                <div class="input-group">
-                    <input 
-                        type="text" 
-                        class="lola-form-input-text" 
-                        placeholder="Amount">
-                    <span class="lola-input-group-addon">
-                        $
-                    </span>
-                </div>
-            </div>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;label class="lola-form-label"&gt; Search ANZSIC &lt;/label&gt;
+        &lt;div class="input-group"&gt;
+            &lt;input 
+                type="text" 
+                class="lola-form-input-text lola-input-search" 
+                placeholder="Amount"
+                required&gt;
+                &lt;span class="lola-input-search-icon"&gt;
+                    &lt;i class="fa fa-search"&gt;&lt;/i&gt;
+                &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form novalidate>
+                            <!-- FORM INPUT RADIO BUTTONS -->
+                            <div class="lola-form-group">
+                                <h1 class="pb-medium">
+                                    Verify the following
+                                </h1>
+                                <p class="pa-regular-small">
+                                    Are statutory payments (ie GST, PF, ESI,<br> taxable components)
+                                    up to date?
+                                </p>
+                                <label class="radio"> 
+                                    <input type="radio" class="radio-input" name="options" checked>
+                                    <span class="radio-text">
+                                        YES
+                                    </span>
+                                </label>
+                                <label class="radio"> 
+                                    <input type="radio" class="radio-input" name="options">
+                                    <span class="radio-text">
+                                        NO
+                                    </span>
+                                </label>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+<pre><code><b>&lt;!-- FORM INPUT RADIO BUTTONS --&gt;</b>
 
-            <!-- FORM INPUT SEARCH ICON -->
-            <div class="lola-form-group">
-                <label class="lola-form-label"> 
-                    Search ANZSIC 
-                </label>
-                <div class="input-group">
-                    <input 
-                        type="text" 
-                        class="lola-form-input-text lola-input-search" 
-                        placeholder="Amount"
-                        required>
-                    <span class="lola-input-search-icon">
-                        <i class="fa fa-search"></i>
-                    </span>
-                </div>
-            </div>
-            <br>
-            <!-- FORM INPUT RADIO BUTTONS -->
-            <div class="lola-form-group">
-                <h1 class="pb-medium">
-                    Verify the following
-                </h1>
-                <p class="pa-regular-small">
-                    Are statutory payments (ie GST, PF, ESI,<br> taxable components)
-                    up to date?
-                </p>
-                <label class="radio"> 
-                    <input type="radio" class="radio-input" name="options" checked>
-                    <span class="radio-text">
-                        YES
-                    </span>
-                </label>
-                <label class="radio"> 
-                    <input type="radio" class="radio-input" name="options">
-                    <span class="radio-text">
-                        NO
-                    </span>
-                </label>
-            </div>
-        </form>
+&lt;form novalidate&gt;
+    &lt;div class="lola-form-group"&gt;
+        &lt;h1 class="pb-medium"&gt;
+            Verify the following
+        &lt;/h1&gt;
+        &lt;p class="pa-regular-small"&gt;
+            Are statutory payments (ie GST, PF, ESI, taxable components) up to date?
+        &lt;/p&gt;
+
+        &lt;label class="radio"&gt; 
+            &lt;input type="radio" class="radio-input" name="options" checked&gt;
+            &lt;span class="radio-text"&gt;
+                YES
+            &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label class="radio"&gt; 
+            &lt;input type="radio" class="radio-input" name="options"&gt;
+            &lt;span class="radio-text"&gt;
+                NO
+            &lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
