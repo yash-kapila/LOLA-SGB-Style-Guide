@@ -19,6 +19,7 @@ form {
             @include lola-buttons-dimensions(36px, 250px);
             border: 1px solid #DDDDDD;
             padding: 0 0 0 10px;
+            vertical-align: middle;
         }
 
         .lola-form-validation-error {
@@ -33,7 +34,7 @@ form {
             display: block;
             resize: none;
             padding: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 5px;            
         }
 
         .lola-form-text-area-message {
@@ -47,17 +48,13 @@ form {
             vertical-align: middle;
 
             .lola-form-input-text:first-child {
-                @include lola-buttons-dimensions(36px, 220px);
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
-                vertical-align: middle;
             }
 
             .lola-form-input-text:last-child {
-                @include lola-buttons-dimensions(36px, 220px);
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
-                vertical-align: middle;
             }
 
             .lola-input-group-addon {
