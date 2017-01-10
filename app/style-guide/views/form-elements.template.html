@@ -102,8 +102,8 @@
                                 </label>
                                 <lola-dropdown 
                                     title="Selection Option"
-                                    menu-items="home.dropdown"
-                                    on-select="home.dropdownOptionSelected(id)"
+                                    menu-items="form.dropdown"
+                                    on-select="form.dropdownOptionSelected(id)"
                                     size='lg'>
                                 </lola-dropdown>
                             </div>
@@ -117,8 +117,8 @@
         &lt;label class="lola-form-label"&gt; Who is the primary borrower? &lt;/label&gt;
         &lt;lola-dropdown 
             title="Selection Option"
-            menu-items="home.dropdown"
-            on-select="home.dropdownOptionSelected(id)"
+            menu-items="form.dropdown"
+            on-select="form.dropdownOptionSelected(id)"
             size='lg'&gt;
         &lt;/lola-dropdown&gt;
     &lt;/div&gt;
@@ -136,7 +136,7 @@
                                 </label>
                                 <div class="input-group">
                                     <span class="lola-input-group-addon">
-                                        $
+                                        <i class="fa fa-usd" aria-hidden="true"></i>
                                     </span>
                                     <input 
                                         type="text" 
@@ -153,7 +153,9 @@
     &lt;div class="lola-form-group"&gt;
         &lt;label class="lola-form-label"&gt; Latest Market Value &lt;/label&gt;
         &lt;div class="input-group"&gt;
-            &lt;span class="lola-input-group-addon"&gt; & &lt;/span&gt;
+            &lt;span class="lola-input-group-addon"&gt; 
+                &lt;i class="fa fa-usd" aria-hidden="true"&gt;&lt;/i&gt;
+            &lt;/span&gt;
             &lt;input 
                 type="text" 
                 class="lola-form-input-text" 
