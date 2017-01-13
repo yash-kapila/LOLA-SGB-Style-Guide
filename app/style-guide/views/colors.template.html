@@ -1,0 +1,243 @@
+<div id="colours">
+    <div id="coloursWpc">
+        <h2 class='mac_heading'>Colors</h2>
+        <p>Colors are taken from the GEL palette, with some customisation.</p>
+
+        <ul class="nav nav-tabs">
+            <li id="primary-colors" ng-class="{'active': colors.selectedColor === 'primary'}">
+                <a href="" ng-click="colors.colorCodeSelected($event, 'primary');">
+                    Primary Colors
+                </a>
+            </li>
+            <li id="secondary-colors" ng-class="{'active': colors.selectedColor === 'secondary'}">
+                <a href="" ng-click="colors.colorCodeSelected($event, 'secondary');">
+                    Secondary Colors
+                </a>
+            </li>
+            <li id="reserve-colors" ng-class="{'active': colors.selectedColor === 'reserve'}">
+                <a href="" ng-click="colors.colorCodeSelected($event, 'reserve');">
+                    Reserve Colors
+                </a>
+            </li>
+            <li id="background-colors" ng-class="{'active': colors.selectedColor === 'background'}">
+                <a href="" ng-click="colors.colorCodeSelected($event, 'background');">
+                    Background Colors
+                </a>
+            </li>
+        </ul>
+        <div id="primary-color-table" ng-if="colors.selectedColor === 'primary'">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center"> Color </th>
+                        <th class="text-center"> Type </th>
+                        <th class="text-center"> HEX Color Code </th>
+                        <th class="text-center"> RGB Color Code </th>
+                        <th class="text-center"> Class Code Reference </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #6D6D6D; padding: 30px;"></td>
+                        <td> Primary A </td>
+                        <td> #6D6D6D </td>
+                        <td> rgb(109,109,109) </td>
+                        <td> PA- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #2D373E; padding: 30px;"></td>
+                        <td> Primary B </td>
+                        <td> #2D373E </td>
+                        <td> rgb(45,55,62) </td>
+                        <td> PB- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #621A4B; padding: 30px;"></td>
+                        <td> Primary C </td>
+                        <td> #621A4B </td>
+                        <td> rgb(98,26,75) </td>
+                        <td> PC- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #4E0034; padding: 30px;"></td>
+                        <td> Primary D </td>
+                        <td> #4E0034 </td>
+                        <td> rgb(78,0,52) </td>
+                        <td> PD- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #D5002B; padding: 30px;"></td>
+                        <td> Primary E </td>
+                        <td> #D5002B </td>
+                        <td> rgb(213,0,43) </td>
+                        <td> PE- </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="secondary-color-table" ng-if="colors.selectedColor === 'secondary'">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center"> Color </th>
+                        <th class="text-center"> Type </th>
+                        <th class="text-center"> HEX Color Code </th>
+                        <th class="text-center"> RGB Color Code </th>
+                        <th class="text-center"> Class Code Reference </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #935599; padding: 30px;"></td>
+                        <td> Secondary A </td>
+                        <td> #935599 </td>
+                        <td> rgb(109,109,109) </td>
+                        <td> SA- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #A77BA4; padding: 30px;"></td>
+                        <td> Secondary B </td>
+                        <td> #A77BA4 </td>
+                        <td> rgb(45,55,62) </td>
+                        <td> SB- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ABB6DA; padding: 30px;"></td>
+                        <td> Secondary C </td>
+                        <td> #ABB6DA </td>
+                        <td> rgb(98,26,75) </td>
+                        <td> SC- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #60B8BF; padding: 30px;"></td>
+                        <td> Secondary D </td>
+                        <td> #60B8BF </td>
+                        <td> rgb(78,0,52) </td>
+                        <td> SD- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #006F77; padding: 30px;"></td>
+                        <td> Secondary E </td>
+                        <td> #006F77 </td>
+                        <td> rgb(213,0,43) </td>
+                        <td> SE- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F4A000; padding: 30px;"></td>
+                        <td> Secondary F </td>
+                        <td> #F4A000 </td>
+                        <td> rgb(213,0,43) </td>
+                        <td> SF- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #AAAAAA; padding: 30px;"></td>
+                        <td> Secondary G </td>
+                        <td> #AAAAAA </td>
+                        <td> rgb(213,0,43) </td>
+                        <td> SG- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #DDDDDD; padding: 30px;"></td>
+                        <td> Secondary H </td>
+                        <td> #DDDDDD </td>
+                        <td> rgb(221,221,221) </td>
+                        <td> SH- </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="reserve-color-table" ng-if="colors.selectedColor === 'reserve'">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center"> Color </th>
+                        <th class="text-center"> Type </th>
+                        <th class="text-center"> HEX Color Code </th>
+                        <th class="text-center"> RGB Color Code </th>
+                        <th class="text-center"> Class Code Reference </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #61B900; padding: 30px;"></td>
+                        <td> Success </td>
+                        <td> #61B900 </td>
+                        <td> rgb(97,185,0) </td>
+                        <td> RS- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #0074C4; padding: 30px;"></td>
+                        <td> Primary </td>
+                        <td> #0074C4 </td>
+                        <td> rgb(0,116,196) </td>
+                        <td> RP- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #5BC0DE; padding: 30px;"></td>
+                        <td> Information </td>
+                        <td> #5BC0DE </td>
+                        <td> rgb(91,192,222) </td>
+                        <td> RI- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #C53B00; padding: 30px;"></td>
+                        <td> Warning </td>
+                        <td> #C53B00 </td>
+                        <td> rgb(197,59,0) </td>
+                        <td> RW- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #C40000; padding: 30px;"></td>
+                        <td> Fail </td>
+                        <td> #C40000 </td>
+                        <td> rgb(196,0,0) </td>
+                        <td> RF- </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="background-color-table" ng-if="colors.selectedColor === 'background'">
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th class="text-center"> Color </th>
+                        <th class="text-center"> Type </th>
+                        <th class="text-center"> HEX Color Code </th>
+                        <th class="text-center"> RGB Color Code </th>
+                        <th class="text-center"> Class Code Reference </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="background-color: #FFF; padding: 30px;"></td>
+                        <td> White </td>
+                        <td> #FFFFFF </td>
+                        <td> rgb(255,255,255) </td>
+                        <td> BW- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F5F5F5; padding: 30px;"></td>
+                        <td> Grey </td>
+                        <td> #F5F5F5 </td>
+                        <td> rgb(245,245,245) </td>
+                        <td> BG- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #F6F3F6; padding: 30px;"></td>
+                        <td> Purple </td>
+                        <td> #F6F3F6 </td>
+                        <td> rgb(246,243,246) </td>
+                        <td> BP- </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #EDF1FF; padding: 30px;"></td>
+                        <td> Blue </td>
+                        <td> #EDF1FF </td>
+                        <td> rgb(237,241,255) </td>
+                        <td> BB- </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+.radio {
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.radio input[type=radio] {
+    margin: 0px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.radio .radio-input {
+    z-index: 0
+}
+
+.radio .radio-input:focus+.radio-text {
+    outline: none
+}
+
+.radio .radio-input:hover+.radio-text {
+    outline: none
+}
+
+.radio .radio-input:disabled+.radio-text {
+    color: #575f65
+}
+
+.radio .radio-input:disabled+.radio-text:hover {
+    cursor: not-allowed
+}
+
+.radio .radio-text {
+    font-size: 13px;
+    font-family: Roboto;
+    color: #6D6D6D;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.radio .radio-text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    z-index: 1
+}
+
+.radio .radio-text:hover {
+    cursor: pointer
+}
+
+.radio+.radio {
+    margin-left: 18px;
+    margin-top: 10px;
+}

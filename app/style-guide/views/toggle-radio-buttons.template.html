@@ -1,0 +1,81 @@
+<div id="toggle-radio-buttons">
+    <h2 class='mac_heading'>Toggle/Radio</h2>
+    <p> Toggle/Radio buttons are styled using the GEL
+        Framework as guide with little tweaks specific to LOLA.
+    </p>
+    <p>
+        Provide <b>default</b> only in case a button needs to be pre-selected in the toggle list.
+    </p>
+    <p>
+        Provide a <b>unique name</b> for each radio buttons group. 
+    </p>
+    <div class="toggle-radio-buttons">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Browser View</th>
+                    <th>HTML</th>
+                    <th>Javascript</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <lola-toggle-buttons
+                            name="conditional-limits"
+                            options="toggle.toggleOptions"
+                            default="toggle.toggleOptions[0]"
+                            on-select="toggle.toggleOptionsCallback(id)">
+                        </lola-toggle-buttons>
+                    </td>
+                    <td>
+<pre><code>&lt;lola-toggle-buttons
+name="conditional-limits"    
+options="toggleOptions"
+default="toggleOptions[0]"
+on-select="toggleOptionsCallback(id)"&gt;
+&lt;/lola-toggle-buttons&gt;</code></pre>
+                    </td>
+                    <td>
+<pre><code>vm.toggleOptions = [
+{ id: 'ALL', name: 'All' },
+{ id: 'YES', name: 'Yes' },
+{ id: 'NO', name: 'No' }
+];
+
+vm.toggleOptionsCallback = function(id) {
+console.log(id);
+}</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lola-toggle-buttons
+                            name="connection-restricted"
+                            options="toggle.toggleOptions"
+                            on-select="toggle.toggleOptionsCallback(id)">
+                        </lola-toggle-buttons>
+                    </td>
+                    <td>
+<pre><code>&lt;lola-toggle-buttons
+name="connection-restricted"
+options="toggleOptions"
+on-select="toggleOptionsCallback(id)"&gt;
+&lt;/lola-toggle-buttons&gt;</code></pre>
+                    </td>
+                    <td>
+<pre><code>vm.toggleOptions = [
+{ id: 'ALL', name: 'All' },
+{ id: 'YES', name: 'Yes' },
+{ id: 'NO', name: 'No' }
+];
+
+vm.toggleOptionsCallback = function(id) {
+console.log(id);
+}</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -15,8 +15,38 @@ function StateConfig($stateProvider, $urlRouterProvider , ChartJsProvider) {
     $stateProvider
         .state('home', {
             url: '/home',
-            templateUrl: require('../views/home-page.template.html'),
-            controller: 'homePageController',
-            controllerAs: 'home'
-        })             
+            views: {
+                '': {
+                    templateUrl: require('../views/home-page.template.html'),
+                    controller: 'homePageController',
+                    controllerAs: 'home'
+                },
+                'typography@home': {
+                    templateUrl: require('../views/typography.template.html')
+                },
+                'colors@home': {
+                    templateUrl: require('../views/colors.template.html'),
+                    controller: 'colorsController',
+                    controllerAs: 'colors'
+                },
+                'buttons@home': {
+                    templateUrl: require('../views/buttons.template.html')
+                },
+                'dropdown@home': {
+                    templateUrl: require('../views/dropdown.template.html'),
+                    controller: 'dropdownController',
+                    controllerAs: 'dropdown'
+                },
+                'toggle-radio-buttons@home': {
+                    templateUrl: require('../views/toggle-radio-buttons.template.html'),
+                    controller: 'toggleRadioButtonsController',
+                    controllerAs: 'toggle'
+                },
+                'form-elements@home': {
+                    templateUrl: require('../views/form-elements.template.html'),
+                    controller: 'formElementsController',
+                    controllerAs: 'form'
+                }
+            }
+        });
 }

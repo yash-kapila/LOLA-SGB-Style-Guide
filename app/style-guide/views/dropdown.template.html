@@ -1,0 +1,56 @@
+<div id="dropdown">
+    <h2 class='mac_heading'> Dropdowns </h2>
+    <p>
+        Dropdowns are styled using the Gel Framework as guide 
+        with little tweaks specific to LOLA.
+    </p>
+    <p>
+        Provide <b>default</b> only in case an option needs to be pre-selected in the dropdown.
+        Otherwise, provide <b>title</b>.
+    </p>
+    <div class="container">
+        <table class="table table-bordered" style="table-layout: fixed">
+            <thead>
+                <tr>
+                    <th> Browser View </th>
+                    <th> HTML </th>
+                    <th> Javascript </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <lola-dropdown 
+                            title="Select & Add New"
+                            default="dropdown.dropdown[0]"
+                            menu-items="dropdown.dropdown"
+                            on-select="dropdown.dropdownOptionSelected(id)">
+                        </lola-dropdown>
+                        <br>
+                    </td>
+                    <td>
+<pre><code>&lt;lola-dropdown 
+title="Select & Add New"
+default="dropdown[0]"
+menu-items="dropdown"
+on-select="dropdownOptionSelected(id)"&gt;
+&lt;/lola-dropdown&gt;</code></pre>
+                    </td>
+                    <td>
+<pre><code>vm.dropdown = [
+{ id: 1, name: "Add Borrowing Entity" },
+{ id: 2, name: "Add Facility" },
+{ id: 3, name: "Add Security" },
+{ id: 4, name: "Add Guarantee" }
+]
+
+vm.dropdownOptionSelected = function(id) {
+console.log(id);
+}
+</code></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
