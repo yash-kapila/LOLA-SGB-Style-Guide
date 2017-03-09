@@ -18,7 +18,7 @@ module.exports = function(env, mod){
 			filename: appConfig.hashAssets ? 'app.[chunkhash].js' : '[name].bundle.js'
 		},
 		resolve: {
-			modulesDirectories: ["node_modules"]
+			modulesDirectories: ["node_modules",]
 		},
 		module: {
 			loaders: [
@@ -59,7 +59,7 @@ module.exports = function(env, mod){
 		config.devtool = 'eval';			
 		for(var key in config.entry) {			
 			config.entry[key].unshift(
-				'webpack-dev-server/client?http://localhost:8080/',
+				'webpack-dev-server/client?http://localhost:8008/',
 				'webpack/hot/dev-server'
 			);
 		}
@@ -67,7 +67,7 @@ module.exports = function(env, mod){
 		config.plugins = config.plugins.concat(
 			new webpack.HotModuleReplacementPlugin()
 		);
-	}	
+	}
 
 	return config;
 };
