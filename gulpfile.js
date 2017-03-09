@@ -8,6 +8,7 @@ var webpack = require('webpack');
 var del = require('del');
 var webpackConfig = require('./webpack.config.js');
 var config = require('./config/config.json');
+var html2js = require('gulp-html2js');
 
 function getOutputPath(env, mod) {
 	return '_build/'+env+'/'+mod.name;
@@ -89,7 +90,7 @@ function server() {
 				colors: true
 			},
 			noInfo: true
-		}).listen(8080, 'localhost', function(err) {
+		}).listen(8008, 'localhost', function(err) {
 			if(err) {
 				throw new gutil.PluginError('dev-server', err);
 			}
@@ -115,4 +116,20 @@ gulp.task('release', build('prod', config));
 // dev-server tasks
 gulp.task('server:local', server());
 
-gulp.task('default', ['server:local']);
+
+gulp.task('html2Js', function () {
+    gulp.src('app/components/common/**/*.html')
+        .pipe(html2js('template.js', {
+        	module: 'app.templates',
+            base: '.',
+            name: 'template-module',
+            options: { watch: true }
+        }))
+        .pipe(gulp.dest('app/components/common'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('app/components/common/**/*.html', ['html2Js'])
+});
+
+gulp.task('default', ['watch', 'server:local']);
